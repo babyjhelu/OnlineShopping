@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4091802386">
+    <data-source source="LOCAL" name="MySQL - onlineshopping@localhost" uuid="d3828c7b-401e-4040-a868-80bdccb17183">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/onlineshopping</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc7dfd3dfd9dfdbdfc6dfd8dfc5dfc5dfde</user-password>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails onlineshopping: development" uuid="395aa853-3e7a-426c-87c0-151e087bfc98">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/onlineshopping</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc7dfd3dfd9dfdbdfc6dfd8dfc5dfc5dfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails onlineshopping: test" uuid="6f93f3de-674e-4299-8413-c32e31405265">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/onlineshopping_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc7dfd3dfd9dfdbdfc6dfd8dfc5dfc5dfde</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails onlineshopping: production" uuid="054af2ee-c63a-4575-bbc1-48c3c5a8ad56">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/onlineshopping_production</jdbc-url>
+      <user-name>onlineshopping</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe5dfe4dfe6dfe3dfe4dfefdff9dfe2dfe5dffadffadfe3dfe4dfeddff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

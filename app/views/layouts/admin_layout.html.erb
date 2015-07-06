@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Starter Template for Bootstrap</title>
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js", "https://oss.maxcdn.com/respond/1.4.2/respond.min.js" %>
+  <![endif]-->
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="admin_background">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to image_tag 'logo.png' , :class => "header-logo"%>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="menu_link  <%= "active" if current_page?(products_path) %>">
+          <a href="<%= products_path %> "><span class="glyphicon glyphicon-shopping-cart"></span> Products</a></li>
+        <li class="menu_link <%= "active " if current_page?(categories_path) %>">
+          <a href="<%= categories_path %> "><span class="glyphicon glyphicon-th"></span>  Categories</a></li>
+        <li><a href="#contact"><span class="glyphicon glyphicon-phone-alt"></span>  Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+
+        <% if admin_signed_in? %>
+            <%= link_to destroy_admin_session_path, :method => :delete, class: 'btn btn-danger btn-logout' do %>
+                <span class="glyphicon glyphicon-off"></span>
+                Logout
+            <% end %>
+
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <% flash.each do |name, msg| %>
+      <%= content_tag :div, class: "alert alert-#{ name == :error ? "danger" : "success" } alert-dismissable", role: "alert" do %>
+          <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <%= msg %>
+      <% end %>
+  <% end %>
+
+  <%= yield %>
+</div>
+</body>
+</html>

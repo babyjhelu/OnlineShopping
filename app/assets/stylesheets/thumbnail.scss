@@ -1,0 +1,66 @@
+/*!
+ * Start Bootstrap - Thumbnail Gallery HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.glyphicon-jhelu {
+  position: absolute;
+  top: 0;
+  right: 17px;
+  font-size: 20px;
+
+}
+
+.active {
+  color: green;
+  font-weight: bold;
+
+}
+
+.active b {
+  color: black;
+  font-weight: bold;
+}
+
+.inactive {
+  color: red;
+  font-weight: bold;
+
+}
+
+.inactive b {
+  color: black;
+  font-weight: bold;
+
+}
+
+.thumb_height {
+  height: 100%;
+  max-height: 200px;
+}
+
+.book {
+  color: #4cae4c;
+}
+
+.edit {
+  color: #2e6da4;
+
+}
+
+.remove {
+  color: #d43f3a;
+
+}
+
+.btn-logout {
+  margin-top: 8px;
+
+}
+
+.header-logo {
+  width: 55px;
+  height: 55px;
+
+}
