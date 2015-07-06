@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df0afb56-50ba-4b5e-b841-d9b176652929" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Sites\onlineshopping_git\app\assets\images\carrera-gt.jpg" afterPath="" />
       <change type="DELETED" beforePath="C:\Sites\onlineshopping_git\public\uploads\category\image\2\4.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/bugatti.jpg" afterPath="$PROJECT_DIR$/app/assets/images/bugatti.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/dodge-viper.jpg" afterPath="$PROJECT_DIR$/app/assets/images/dodge-viper.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/lamborghini.jpg" afterPath="$PROJECT_DIR$/app/assets/images/lamborghini.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/mercedez-benz.jpg" afterPath="$PROJECT_DIR$/app/assets/images/mercedez-benz.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/mustang.jpg" afterPath="$PROJECT_DIR$/app/assets/images/mustang.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/categories/index.html.erb" afterPath="$PROJECT_DIR$/app/views/categories/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="onlineshopping.iws" />
@@ -400,7 +392,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436207403067</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add image&#10;add column category_id to products">
+      <created>1436213801638</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1436213801638</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -446,7 +444,8 @@
     </option>
     <MESSAGE value="add image and update categories redirection&#10;" />
     <MESSAGE value="add image" />
-    <option name="LAST_COMMIT_MESSAGE" value="add image" />
+    <MESSAGE value="add image&#10;add column category_id to products" />
+    <option name="LAST_COMMIT_MESSAGE" value="add image&#10;add column category_id to products" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
