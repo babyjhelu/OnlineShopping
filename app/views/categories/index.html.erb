@@ -3,7 +3,7 @@
       <span class="glyphicon glyphicon-plus"></span>
       New Category
   <% end %>
-  <h1 class="title">Listing Categories</h1>
+  <h1 class="title">Listing Car</h1>
 </div>
 <div class="container">
   <div class="row">
@@ -12,7 +12,7 @@
 
         <div class="thumbnail">
           <h3 class="text-center"><%= category.category_name %></h3>
-          <%= image_tag category.image , :class => "thumbnail thumb_height"  %>
+          <%= image_tag category.image , :class => "thumbnail thumb_height img-zoom"  %>
           <div class="caption">
 
             <% if category.status == true %>
