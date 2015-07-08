@@ -7,10 +7,10 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show product</h1>
+  <h1>Show Smartphones</h1>
 </div>
 
-<dl class="dl-horizontal">
+<dl class="dl-horizontal show-list">
   <dt>Product name:</dt>
   <dd><%= @product.product_name %></dd>
 
@@ -19,5 +19,12 @@
 
   <dt>Available colors:</dt>
   <dd><%= @product.available_colors %></dd>
+
+  <dt>Category:</dt>
+  <dd><%= @product.category_id %></dd>
+
+  <dt>Image:</dt>
+
+  <div class="col-md-4"><%=image_tag @product.image , :class => "thumbnail" %></div>
 
 </dl>
