@@ -10,6 +10,7 @@ class Category < ActiveRecord::Base
   validates :image, :format => {
       with: %r{\.gif|jpg|png}i,
       message: 'Image must be gif, jpg, or png image.'
+
   }
 
 end

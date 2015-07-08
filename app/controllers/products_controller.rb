@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.save
     redirect_to products_path
+    flash[:notice] = "Post successfully created"
   end
 
   def update

@@ -26,6 +26,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.save
     redirect_to categories_path
+    flash[:notice] = "Post successfully created"
   end
 
   def update

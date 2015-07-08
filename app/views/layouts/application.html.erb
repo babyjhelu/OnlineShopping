@@ -21,5 +21,9 @@
 
   <%= yield %>
 
+  <%= f.error_messages :header_message => "Invalid product!",
+                       :message => "You'll need to fix the following fields:",
+                       :header_tag => :h3 %>
+
 </body>
 </html>
