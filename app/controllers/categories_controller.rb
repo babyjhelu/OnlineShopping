@@ -26,17 +26,19 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.save
     redirect_to categories_path
-    flash[:notice] = "Post successfully created"
+    flash[:notice] = "Category Successfully Created"
   end
 
   def update
     @category.update(category_params)
     redirect_to categories_path
+    flash[:notice] = "Category Successfully Updated"
   end
 
   def destroy
     @category.destroy
     respond_with(@category)
+    flash[:notice] = "Category Successfully Destroyed"
   end
 
   private

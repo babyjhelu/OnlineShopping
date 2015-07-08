@@ -28,17 +28,19 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.save
     redirect_to products_path
-    flash[:notice] = "Post successfully created"
+    flash[:notice] = "Product Successfully Created"
   end
 
   def update
     @product.update(product_params)
     redirect_to products_path
+    flash[:notice] = "Product Successfully Updated"
   end
 
   def destroy
     @product.destroy
     respond_with(@product)
+    flash[:notice] = "Product Successfully Destroyed"
   end
 
   private
