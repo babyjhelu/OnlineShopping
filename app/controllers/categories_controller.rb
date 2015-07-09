@@ -1,9 +1,14 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!
+  layout 'admin_layout'
+
+  before_action :set_category, only: [:show]
+  before_action :authenticate_user!
+  layout 'user_layout'
 
   respond_to :html
-  layout 'admin_layout'
+
   def index
     @categories = Category.all
     respond_with(@categories)

@@ -1,6 +1,18 @@
 <html>
 <body class="login_background">
 
+<% if devise_controller? && resource_name == :user%>
+    <h2 class="text-center">User Log in</h2>
+<% else %>
+    <h2 class="text-center">Admin Log in</h2>
+<% end %>
+<% if flash[:notice] %>
+    <p class="btn btn-danger"><%= flash[:notice] %></p>
+<% end %>
+<% if flash[:alert] %>
+    <p class="btn btn-danger"><%= flash[:alert] %></p>
+<% end %>
+
 <%= form_for(resource_name, url: session_path(resource_name)) do |f| %>
 
     <div class="container">
@@ -25,6 +37,7 @@
               <div class="pwstrength_viewport_progress"></div>
 
               <%= f.submit "Log in", :class => "btn btn-lg btn-primary btn-block" %>
+
 
               <div>
 
