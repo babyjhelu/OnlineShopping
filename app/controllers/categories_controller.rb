@@ -3,10 +3,6 @@ class CategoriesController < ApplicationController
   before_action :authenticate_admin!
   layout 'admin_layout'
 
-  before_action :set_category, only: [:show]
-  before_action :authenticate_user!
-  layout 'user_layout'
-
   respond_to :html
 
   def index

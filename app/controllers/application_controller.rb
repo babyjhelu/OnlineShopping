@@ -15,8 +15,4 @@ class ApplicationController < ActionController::Base
     request.referrer
   end
 
-  def after_sign_up_path_for(resource)
-    request.referer
-  end
-
 end

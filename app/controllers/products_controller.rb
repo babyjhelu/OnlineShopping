@@ -3,10 +3,6 @@ class ProductsController < ApplicationController
   before_action :authenticate_admin!
   layout 'admin_layout'
 
-  before_action :set_product, only: [:show, :index]
-  before_action :authenticate_user!
-  layout 'user_layout'
-
   respond_to :html
 
   def index
