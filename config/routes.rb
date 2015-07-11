@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'product' => 'home#product_index'
+  get 'category' => 'home#category_index'
+
   root :to => 'home#index'
 
   resources :categories

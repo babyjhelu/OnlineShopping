@@ -7,8 +7,20 @@ class HomeController < ApplicationController
   respond_to :html
 
   def index
-    @products = Product.all
-    respond_with(@products)
+
+
+  end
+
+  def product_index
+
+    @products = Product.all.where(:category_id => params[:category])
+
+  end
+
+  def category_index
+
+    @categories = Category.all.where(:status=> true)
+
   end
 
 end

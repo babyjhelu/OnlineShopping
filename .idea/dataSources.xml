@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1476251234">
-    <data-source source="LOCAL" name="MySQL - onlineshopping@localhost" uuid="d3828c7b-401e-4040-a868-80bdccb17183">
+  <component name="DataSourceManagerImpl" format="xml" hash="2983686647">
+    <data-source source="LOCAL" name="MySQL - onlineshopping@localhost" uuid="168906f2-6ce2-4b04-b0bc-35bb262beff0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -9,47 +9,11 @@
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
       </driver-properties>
       <libraries />
-    </data-source>
-    <data-source source="LOCAL" name="Rails onlineshopping: development" uuid="395aa853-3e7a-426c-87c0-151e087bfc98">
-      <driver-ref>mysql</driver-ref>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/onlineshopping</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="Rails onlineshopping: test" uuid="6f93f3de-674e-4299-8413-c32e31405265">
-      <driver-ref>mysql</driver-ref>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/onlineshopping_test</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar</url>
-        </library>
-      </libraries>
-    </data-source>
-    <data-source source="LOCAL" name="Rails onlineshopping: production" uuid="054af2ee-c63a-4575-bbc1-48c3c5a8ad56">
-      <driver-ref>mysql</driver-ref>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/onlineshopping_production</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar</url>
-        </library>
-      </libraries>
     </data-source>
   </component>
 </project>

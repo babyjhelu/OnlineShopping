@@ -1,0 +1,30 @@
+<div class="page-header">
+
+  <h1 class="title glyphicon glyphicon-wrench"> Listing Car</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <%= content_tag_for(:tr, @categories) do |category| %>
+        <ul class="thumbnails col-md-3">
+
+          <div class="thumbnail">
+            <h3 class="text-center"><%= category.category_name %></h3>
+            <%= image_tag category.image , :class => "thumbnail thumb_height"  %>
+            <div class="caption">
+
+              <% if category.status == true %>
+                  <p class="active text-center"><b>Status:</b> Active</p>
+              <% else %>
+                  <p class="inactive text-center"><b>Status:</b> Inactive</p>
+              <% end %>
+                <%= link_to 'show products', product_path(:category => category.id)  , :class => 'btn btn-default' %>
+              <p><b>Description:</b> <%= category.description %></p>
+
+            </div>
+          </div>
+        </ul>
+    <% end %>
+  </div>
+
+</div>
+

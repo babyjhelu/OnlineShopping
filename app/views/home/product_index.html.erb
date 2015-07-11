@@ -1,0 +1,25 @@
+<div class="page-header">
+
+  <h1 class="title glyphicon glyphicon-phone"> Listing Smartphones</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <%= content_tag_for(:tr, @products) do |product| %>
+        <ul class="thumbnails col-md-3">
+
+          <div class="thumbnail">
+            <h3 class="text-center"><%= product.product_name %></h3>
+            <%= image_tag product.image , :class => "thumbnail thumb_height"  %>
+            <div class="caption">
+
+              <p><b>Available Sizes:</b> <%= product.available_sizes %></p>
+              <p><b>Available Colors:</b> <%= product.available_colors %></p>
+              <p><b>Category:</b> <%= product.category_id %></p>
+
+            </div>
+          </div>
+        </ul>
+    <% end %>
+  </div>
+
+</div>
