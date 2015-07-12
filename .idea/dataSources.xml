@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2983686647">
-    <data-source source="LOCAL" name="MySQL - onlineshopping@localhost" uuid="168906f2-6ce2-4b04-b0bc-35bb262beff0">
+  <component name="DataSourceManagerImpl" format="xml" hash="2293194284">
+    <data-source source="LOCAL" name="Rails onlineshopping: development" uuid="fd5f5ca3-8fa3-45b5-9536-1643d8444f64">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/onlineshopping</jdbc-url>
+      <jdbc-url>jdbc:mysql://127.0.0.1/onlineshopping</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

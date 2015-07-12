@@ -17,7 +17,7 @@
               <% else %>
                   <p class="inactive text-center"><b>Status:</b> Inactive</p>
               <% end %>
-                <%= link_to 'show products', product_path(:category => category.id)  , :class => 'btn btn-default' %>
+                <p><%= link_to 'Show Products', product_path(:category => category.id)  , :class => 'btn btn-success' %></p>
               <p><b>Description:</b> <%= category.description %></p>
 
             </div>

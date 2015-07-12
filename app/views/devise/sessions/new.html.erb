@@ -1,68 +1,151 @@
-<html>
-<body class="login_background">
-
 <% if devise_controller? && resource_name == :user%>
-    <h2 class="text-center">User Log in</h2>
-<% else %>
-    <h2 class="text-center">Admin Log in</h2>
-<% end %>
-<% if flash[:notice] %>
-    <p class="btn btn-danger"><%= flash[:notice] %></p>
-<% end %>
-<% if flash[:alert] %>
-    <p class="btn btn-danger"><%= flash[:alert] %></p>
-<% end %>
+    <!--USER SIDE-->
 
-<%= form_for(resource_name, url: session_path(resource_name)) do |f| %>
+    <html>
+    <body class="login_background">
 
-    <div class="container">
 
-      <div class="row" id="pwd-container">
-        <div class="col-md-4"></div>
 
-        <div class="col-md-4">
-          <section class="login-form">
-            <form method="post" action="#" role="login">
-              <div class="text-center">
-                <%= image_tag 'logo.png' , :class => "logo-size"%>
-              </div>
-              <%= f.email_field :email, autofocus: true, :placeholder => "Email", :class => "form-control input-lg" %>
-              <%= f.password_field :password, autocomplete: "off", :class => "form-control input-lg", :placeholder => "Password" %>
-              <% if devise_mapping.rememberable? -%>
-                  <div class="field">
-                    <%= f.check_box :remember_me %>
-                    <%= f.label :remember_me %>
+    <%= form_for(resource_name, url: session_path(resource_name)) do |f| %>
+
+        <div class="container">
+
+          <div class="row" id="pwd-container">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+              <section class="login-form">
+
+                <form method="post" action="#" role="login">
+                  <div class="text-center">
+                    <%= image_tag 'logo.png', :class => "logo-size" %>
                   </div>
-              <% end -%>
-              <div class="pwstrength_viewport_progress"></div>
 
-              <%= f.submit "Log in", :class => "btn btn-lg btn-primary btn-block" %>
+                  <div class="text-center">
 
+                  </div>
+                  <%= f.email_field :email, autofocus: true, :placeholder => "Email", :class => "form-control input-lg" , :style => "margin-bottom: 5px;" %>
+                  <%= f.password_field :password, autocomplete: "off", :class => "form-control input-lg", :placeholder => "Password" %>
+                  <% if devise_mapping.rememberable? -%>
+                      <div class="field">
+                        <%= f.check_box :remember_me %>
+                        <%= f.label :remember_me %>
+                      </div>
+                  <% end -%>
+                  <% if flash[:notice] %>
+                      <p class="btn btn-danger" style="width: 100%;"><%= flash[:notice] %></p>
+                  <% end %>
+                  <% if flash[:alert] %>
+                      <p class="btn btn-danger" style="width: 100%;"><%= flash[:alert] %></p>
+                  <% end %>
+                  <br/>
+                  <br/>
+                  <div class="pwstrength_viewport_progress"></div>
 
-              <div>
+                  <%= f.submit "User Log in", :class => "btn btn-lg btn-primary btn-block" %>
 
+                  <div>
 
-              </div>
-
-            </form>
-
-          </section>
+                  </div>
+                </form>
+              </section>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+          <p>
+            <br>
+            <br>
+          </p>
         </div>
-
-        <div class="col-md-4"></div>
-
-
-      </div>
-
-      <p>
-        <br>
-        <br>
-
-      </p>
+    <% end %>
+    </body>
+    </html>
+<% else %>
+    <!--ADMIN SIDE-->
 
 
-    </div>
+    <html>
+    <body class="admin_background">
 
+
+
+    <%= form_for(resource_name, url: session_path(resource_name)) do |f| %>
+
+        <div class="container">
+
+          <div class="row" id="pwd-container">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+              <section class="login-form">
+
+                <form method="post" action="#" role="login">
+                  <div class="text-center">
+                    <%= image_tag 'logo.png', :class => "logo-size" %>
+                  </div>
+
+                  <div class="text-center">
+
+                  </div>
+                  <%= f.email_field :email, autofocus: true, :placeholder => "Email", :class => "form-control input-lg" , :style => "margin-bottom: 5px;" %>
+                  <%= f.password_field :password, autocomplete: "off", :class => "form-control input-lg", :placeholder => "Password" %>
+                  <% if devise_mapping.rememberable? -%>
+                      <div class="field">
+                        <%= f.check_box :remember_me %>
+                        <%= f.label :remember_me %>
+                      </div>
+                  <% end -%>
+                  <% if flash[:notice] %>
+                      <p class="btn btn-danger" style="width: 100%;"><%= flash[:notice] %></p>
+                  <% end %>
+                  <% if flash[:alert] %>
+                      <p class="btn btn-danger" style="width: 100%;"><%= flash[:alert] %></p>
+                  <% end %>
+                  <br/>
+                  <br/>
+                  <div class="pwstrength_viewport_progress"></div>
+
+                  <%= f.submit "Admin Log in", :class => "btn btn-lg btn-primary btn-block" %>
+
+                  <div>
+
+                  </div>
+                </form>
+              </section>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+          <p>
+            <br>
+            <br>
+          </p>
+        </div>
+    <% end %>
+    </body>
 <% end %>
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

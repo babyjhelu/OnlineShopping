@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - onlineshopping@localhost" uuid="168906f2-6ce2-4b04-b0bc-35bb262beff0">
+  <data-source name="Rails onlineshopping: development" uuid="fd5f5ca3-8fa3-45b5-9536-1643d8444f64">
     <database-info product="MySQL" version="5.0.51b-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>

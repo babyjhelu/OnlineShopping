@@ -7,8 +7,8 @@ class HomeController < ApplicationController
   respond_to :html
 
   def index
-
-
+    @home_categories = Category.all.where(:status => true)
+    @banner_products = Product.all
   end
 
   def product_index
