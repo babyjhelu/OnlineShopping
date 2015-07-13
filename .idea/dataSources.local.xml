@@ -3,6 +3,7 @@
   <component name="dataSourceStorageLocal">
     <data-source name="Rails onlineshopping: development" uuid="fd5f5ca3-8fa3-45b5-9536-1643d8444f64">
       <user-name>root</user-name>
+      <user-password>dfc7dfd3dfd9dfdbdfc6dfd8dfc5dfc5dfde</user-password>
       <schema-pattern>onlineshopping.*</schema-pattern>
       <default-schemas>onlineshopping.*</default-schemas>
     </data-source>

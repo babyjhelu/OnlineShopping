@@ -4,9 +4,8 @@
     <html>
     <body class="login_background">
 
-
-
     <%= form_for(resource_name, url: session_path(resource_name)) do |f| %>
+
 
         <div class="container">
 
@@ -18,7 +17,9 @@
 
                 <form method="post" action="#" role="login">
                   <div class="text-center">
-                    <%= image_tag 'logo.png', :class => "logo-size" %>
+                    <%= link_to new_admin_session_path do %>
+                    <%= image_tag 'logo.png', :class => "logo-size"  %>
+                        <% end %>
                   </div>
 
                   <div class="text-center">
@@ -81,7 +82,9 @@
 
                 <form method="post" action="#" role="login">
                   <div class="text-center">
-                    <%= image_tag 'logo.png', :class => "logo-size" %>
+                    <%= link_to root_path do %>
+                        <%= image_tag 'logo.png', :class => "logo-size" %>
+                    <% end %>
                   </div>
 
                   <div class="text-center">

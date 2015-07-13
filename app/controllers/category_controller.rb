@@ -7,8 +7,8 @@ class CategoryController < ApplicationController
   respond_to :html
 
   def index
-    @category = Category.all
-    respond_with(@category)
+    @categories = Category.all
+    respond_with(@categories)
   end
 
 end

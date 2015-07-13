@@ -13,7 +13,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="home-body">
+<body class="login_background">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -29,8 +29,8 @@
       <ul class="nav navbar-nav">
         <li class="menu_link  <%= "active" if current_page?(root_path) %>">
           <a href="<%= root_path %> "><span class="glyphicon glyphicon-home"></span> Home</a></li>
-        <li class="menu_link <%= "active " if current_page?(category_path) %>">
-          <a href="<%= category_path %> "><span class="glyphicon glyphicon-th"></span>  Categories</a></li>
+        <li class="menu_link <%= "active " if current_page?(home_category_path) %>">
+          <a href="<%= home_category_path %> "><span class="glyphicon glyphicon-th"></span>  Categories</a></li>
         <li><a href="#contact"><span class="glyphicon glyphicon-phone-alt"></span>  Contact</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
