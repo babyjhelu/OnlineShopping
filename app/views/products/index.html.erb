@@ -3,7 +3,7 @@
       <span class="glyphicon glyphicon-plus"></span>
       New Product
   <% end %>
-  <h1 class="title glyphicon glyphicon-phone"> Listing Smartphones</h1>
+  <h1 class="title glyphicon glyphicon-shopping-cart"> Listing Products</h1>
 </div>
 <div class="container">
   <div class="row">
@@ -15,9 +15,11 @@
             <%= image_tag product.image , :class => "thumbnail thumb_height"  %>
             <div class="caption">
 
+              <p><%= link_to approve_link_text(product), toggle_approve_product_path(product), :remote => true, :id => "approve_link_#{product.id}" , :class => 'btn btn-success' %></p>
+
               <p><b>Available Sizes:</b> <%= product.available_sizes %></p>
               <p><b>Available Colors:</b> <%= product.available_colors %></p>
-              <p><b>Category:</b> <%= product.category_id %></p>
+              <p><b>Category:</b> <%= product.category.category_name %></p>
               <div class="glyphicon-jhelu">
                 <%= link_to '', product, :class => "glyphicon glyphicon-book book" %>
                 <%= link_to '', edit_product_path(product), :class => "glyphicon glyphicon-edit edit" %>

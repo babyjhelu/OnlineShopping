@@ -23,6 +23,15 @@ class ProductsController < ApplicationController
   def edit
   end
 
+  def toggle_approve
+    @products = Product.find(params[:id])
+    @products.toggle!(:status)
+    respond_to do |format|
+      format.js
+    end
+  end
+
+
   def create
     @product = Product.new(product_params)
     @product.save
@@ -48,6 +57,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:product_name, :available_sizes, :available_colors, :category_id , :image)
+      params.require(:product).permit(:product_name, :available_sizes, :available_colors, :category_id , :image, :status)
     end
 end

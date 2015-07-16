@@ -12,14 +12,14 @@ class HomeController < ApplicationController
   end
 
   def product_index
-
-    @products = Product.all.where(:category_id => params[:category])
+    
+    @products = Product.all.where(:status => true, :category_id => params[:category])
 
   end
 
   def category_index
 
-    @categories = Category.all.where(:status=> true)
+    @categories = Category.all.where(:status => true)
 
   end
 

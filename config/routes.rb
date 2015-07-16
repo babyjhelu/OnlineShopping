@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :categories
 
-  resources :products
+  resources :products do
+    get 'toggle_approve', :on => :member
+  end
 
   devise_for :admins
 

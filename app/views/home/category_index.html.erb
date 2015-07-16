@@ -17,8 +17,12 @@
               <% else %>
                   <p class="inactive text-center"><b>Status:</b> Inactive</p>
               <% end %>
+              <div class="text-center">
                 <p><%= link_to 'Show Products', home_product_path(:category => category.id)  , :class => 'btn btn-success' %></p>
+
               <p><b>Description:</b> <%= category.description %></p>
+
+              </div>
 
             </div>
           </div>
@@ -27,4 +31,41 @@
   </div>
 
 </div>
+
+<!-- login modal -->
+<div class="modal fade" id="login">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+
+      <div class="row">
+        <div class="col-sm-6">
+          <h4>Sign In</h4>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remeber password
+            </label>
+          </div>
+          <div class="forgot-password"><a href="#">Forgot Password</a></div>
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+        <div class="col-sm-6">
+          <h4>Create an Account</h4>
+          <p>I would like to create a new account. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dolor tellus, tempor ut ultrices ferme ntum, aliquam consequat metus. </p>
+          <a href="createaccount.php" class="btn btn-danger">Create an Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- login modal -->
 

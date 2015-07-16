@@ -23,6 +23,12 @@
   <dt>Category:</dt>
   <dd><%= @product.category_id %></dd>
 
+  <dd><% if @product.status == true %></dd>
+        <dt>Status: Active</dt>
+    <% else %>
+        <dt>Status: Inactive</dt>
+    <% end %>
+
   <dt>Image:</dt>
 
   <div class="col-md-4"><%=image_tag @product.image , :class => "thumbnail" %></div>
