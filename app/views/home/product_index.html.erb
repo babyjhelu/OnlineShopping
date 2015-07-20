@@ -20,27 +20,31 @@
             <h3 class="text-center"><%= product.product_name %></h3>
             <%= image_tag product.image , :class => "thumbnail thumb_height"%>
 
+            <p class="text-center">
+              <%= link_to home_category_path , class: 'btn btn-md btn-primary' do %>
+                  Buy Product
+              <% end %>
+            </p>
+
             <span class="pull-right">
               <i id="like1" class="glyphicon glyphicon-thumbs-up"></i> <div id="like1-bs3"></div>
+              </span>
+
+            <span class="pull-right">
               <i id="dislike1" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike1-bs3"></div>
             </span>
 
-            <% if product.status == true %>
-                <p class="active text-center"><b>Status:</b> Active</p>
-            <% else %>
-                <p class="inactive text-center"><b>Status:</b> Inactive</p>
-            <% end %>
-
             <div class="caption">
+
+              <% if product.status == true %>
+                  <p class="active"><b>Status:</b> Active</p>
+              <% else %>
+                  <p class="inactive"><b>Status:</b> Inactive</p>
+              <% end %>
+
               <p><b>Available Sizes:</b> <%= product.available_sizes %></p>
               <p><b>Available Colors:</b> <%= product.available_colors %></p>
               <p><b>Category:</b> <%= product.category.category_name %></p>
-
-              <p class="text-center">
-                <%= link_to home_category_path , class: 'btn btn-md btn-primary' do %>
-                    Buy Product
-                <% end %>
-              </p>
 
             </div>
           </div>
