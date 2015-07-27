@@ -13,15 +13,20 @@
         <div class="thumbnail">
           <h3 class="text-center"><%= category.category_name %></h3>
           <%= image_tag category.image , :class => "thumbnail thumb_height"  %>
+          <% if category.status == true %>
+              <p class="active text-center"><b>Status:</b> Active</p>
+          <% else %>
+              <p class="inactive text-center"><b>Status:</b> Inactive</p>
+          <% end %>
+          <div class="text-center">
+          <%= link_to products_path(:category => category.id)  , :class => 'btn btn-success' do %>
+                <span class="glyphicon glyphicon-plus"></span>
+                Add Products
+          <% end %>
+          </div>
           <div class="caption">
 
-            <% if category.status == true %>
-                <p class="active text-center"><b>Status:</b> Active</p>
-            <% else %>
-                <p class="inactive text-center"><b>Status:</b> Inactive</p>
-            <% end %>
-
-            <p><b>Description:</b> <%= category.description %></p>
+            <p class="text-center"><b>Description:</b> <%= category.description %></p>
             <div class="glyphicon-jhelu">
               <%= link_to '', category, :class => "glyphicon glyphicon-book book" %>
               <%= link_to '', edit_category_path(category), :class => "glyphicon glyphicon-edit edit" %>

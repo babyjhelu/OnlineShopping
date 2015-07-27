@@ -1,6 +1,7 @@
-<div class="page-header">
+<body class="login_background">
 
-  <h1 class="title glyphicon glyphicon-list"> Listing Categories</h1>
+<div class="jhelu-header">
+
 </div>
 <div class="container">
   <div class="row">
@@ -18,9 +19,14 @@
                   <p class="inactive text-center"><b>Status:</b> Inactive</p>
               <% end %>
               <div class="text-center">
-                <p><%= link_to 'Show Products', home_product_path(:category => category.id)  , :class => 'btn btn-success' %></p>
 
-              <p><b>Description:</b> <%= category.description %></p>
+                <p><%= link_to home_product_path(:category => category.id)  , :class => 'btn btn-success' do %>
+                    <span class="glyphicon glyphicon-level-up"></span>
+                     Show Products
+                <% end %>
+                </p>
+
+              <p class="text-center"><b>Description:</b> <%= category.description %></p>
 
               </div>
 
@@ -69,3 +75,31 @@
 </div>
 <!-- login modal -->
 
+<!-- footer -->
+<div class="footer navbar-fixed-bottom" role="navigation">
+  <div class="pull-left">
+    <form class="navbar-form navbar-left newsletter" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter Your Email Id Here">
+      </div>
+      <button type="submit" class="btn btn-inverse">Subscribe</button>
+    </form>
+    <div class="links">
+      <a href="<%= home_about_path %>">About </a>
+      <a href="<%= home_terms_path %>">Terms & Condition </a>
+      <a href="<%= home_contact_path %>">Contact </a>
+    </div>
+  </div>
+
+  <div class="social pull-right">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square" data-toggle="tooltip" data-placement="top" data-original-title="facebook"></i></a>
+    <a href="https://www.instagram.com/"><i class="fa fa-instagram"  data-toggle="tooltip" data-placement="top" data-original-title="instragram"></i></a>
+    <a href="https://www.twitter.com/"><i class="fa fa-twitter-square" data-toggle="tooltip" data-placement="top" data-original-title="twitter"></i></a>
+    <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-square" data-toggle="tooltip" data-placement="top" data-original-title="pinterest"></i></a>
+    <a href="https://www.tumblr.com/"><i class="fa fa-tumblr-square" data-toggle="tooltip" data-placement="top" data-original-title="tumblr"></i></a>
+    <a href="https://www.youtube.com/"><i class="fa fa-youtube-square" data-toggle="tooltip" data-placement="top" data-original-title="youtube"></i></a>
+  </div>
+</div>
+
+<!-- footer -->
+</body>

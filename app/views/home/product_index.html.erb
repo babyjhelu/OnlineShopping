@@ -1,14 +1,6 @@
-<div class="page-header">
+<body class="login_background">
+<div class="jhelu-header">
 
-  <ul class="nav navbar-nav pull-right back-jhelu">
-
-    <%= link_to home_category_path , class: 'btn btn-info' do %>
-        <span class="glyphicon glyphicon-arrow-left"></span>
-        Back
-    <% end %>
-  </ul>
-
-  <h1 class="title glyphicon glyphicon-shopping-cart"> Listing Products</h1>
 </div>
 <div class="container">
   <div class="row">
@@ -19,28 +11,19 @@
 
             <h3 class="text-center"><%= product.product_name %></h3>
             <%= image_tag product.image , :class => "thumbnail thumb_height"%>
-
+            <div class="caption">
+            <% if product.status == true %>
+                <p class="active text-center"><b>Status:</b> Active</p>
+            <% else %>
+                <p class="inactive text-center"><b>Status:</b> Inactive</p>
+            <% end %>
             <p class="text-center">
-              <%= link_to home_category_path , class: 'btn btn-md btn-primary' do %>
-                  Buy Product
+              <%= link_to home_category_path , :class => 'btn btn-primary' do %>
+                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                  Add to Cart
               <% end %>
             </p>
 
-            <span class="pull-right">
-              <i id="like1" class="glyphicon glyphicon-thumbs-up"></i> <div id="like1-bs3"></div>
-              </span>
-
-            <span class="pull-right">
-              <i id="dislike1" class="glyphicon glyphicon-thumbs-down"></i> <div id="dislike1-bs3"></div>
-            </span>
-
-            <div class="caption">
-
-              <% if product.status == true %>
-                  <p class="active"><b>Status:</b> Active</p>
-              <% else %>
-                  <p class="inactive"><b>Status:</b> Inactive</p>
-              <% end %>
 
               <p><b>Available Sizes:</b> <%= product.available_sizes %></p>
               <p><b>Available Colors:</b> <%= product.available_colors %></p>
@@ -53,3 +36,32 @@
   </div>
 
 </div>
+
+<!-- footer -->
+<div class="footer navbar-fixed-bottom" role="navigation">
+  <div class="pull-left">
+    <form class="navbar-form navbar-left newsletter" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Enter Your Email Id Here">
+      </div>
+      <button type="submit" class="btn btn-inverse">Subscribe</button>
+    </form>
+    <div class="links">
+      <a href="<%= home_about_path %>">About </a>
+      <a href="<%= home_terms_path %>">Terms & Condition </a>
+      <a href="<%= home_contact_path %>">Contact </a>
+    </div>
+  </div>
+
+  <div class="social pull-right">
+    <a href="https://www.facebook.com/"><i class="fa fa-facebook-square" data-toggle="tooltip" data-placement="top" data-original-title="facebook"></i></a>
+    <a href="https://www.instagram.com/"><i class="fa fa-instagram"  data-toggle="tooltip" data-placement="top" data-original-title="instragram"></i></a>
+    <a href="https://www.twitter.com/"><i class="fa fa-twitter-square" data-toggle="tooltip" data-placement="top" data-original-title="twitter"></i></a>
+    <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-square" data-toggle="tooltip" data-placement="top" data-original-title="pinterest"></i></a>
+    <a href="https://www.tumblr.com/"><i class="fa fa-tumblr-square" data-toggle="tooltip" data-placement="top" data-original-title="tumblr"></i></a>
+    <a href="https://www.youtube.com/"><i class="fa fa-youtube-square" data-toggle="tooltip" data-placement="top" data-original-title="youtube"></i></a>
+  </div>
+</div>
+
+<!-- footer -->
+</body>

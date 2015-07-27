@@ -36,42 +36,47 @@
         <li class="menu_link  <%= "active" if current_page?(root_path) %>">
           <a href="<%= root_path %> "><span class="glyphicon glyphicon-home"></span> Home</a></li>
         <li class="menu_link <%= "active " if current_page?(home_category_path) %>">
-          <a href="<%= home_category_path %>"><span class="glyphicon glyphicon-list"></span> Categories</a></li>
-        <li><a href="checkout.php">Checkout</a></li>
+          <a href="<%= home_category_path %>"><span class="glyphicon glyphicon-th"></span> Categories</a></li>
+        <li><a href="#">Checkout</a></li>
       </ul>
 
       <form class="navbar-form navbar-left searchbar" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search for products">
+          <input type="text" class="form-control" placeholder="Search for Products">
         </div>
-        <button type="submit" class="btn btn-inverse">Search</button>
+          <%= link_to home_category_path , :class => 'btn btn-warning' do %>
+              <span class="glyphicon glyphicon-search"></span>
+              Search
+          <% end %>
       </form>
       <ul class="nav navbar-nav">
         <li><a href="#"  data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-user"></span> Login / Register</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Cart <span class="cart-counter">8</span> <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-shopping-cart"></span> Cart <span class="cart-counter">2</span> <span class="caret"></span></a>
           <div class="dropdown-menu mini-cart">
             <div class="row product-list">
-              <div class="col-xs-3"><a href="#"><img src="images/products/1.jpg" class="img-responsive" alt="product"></a></div>
-              <div class="col-xs-7"><a href="#">White V-neck Tshirt</a></div>
+              <div class="col-xs-3"><a href="#"><%= image_tag '1.jpg' , :class => "img-responsive" , :alt => "product" %></a></div>
+              <div class="col-xs-7"><a href="#">White JagThug Tshirt</a></div>
               <div class="col-xs-1"><a href="#"><i class="fa fa-close"></i></a></div>
             </div>
 
             <div class="row product-list">
-              <div class="col-xs-3"><a href="#"><img src="images/products/2.jpg" class="img-responsive" alt="product"></a></div>
-              <div class="col-xs-7"><a href="#">White V-neck Tshirt</a></div>
+              <div class="col-xs-3"><a href="#"><%= image_tag '2.jpg' , :class => "img-responsive" , :alt => "product" %></a></div>
+              <div class="col-xs-7"><a href="#">Blue Aeropostale Tshirt</a></div>
               <div class="col-xs-1"><a href="#"><i class="fa fa-close"></i></a></div>
             </div>
 
             <div class="clearfix">
-              <a href="checkout.php" class="btn btn-primary pull-left">continue shopping</a> <a href="checkout.php" class="btn btn-danger pull-right">checkout</a>
+              <a href="#" class="btn btn-primary pull-left">Continue shopping</a> <a href="#" class="btn btn-danger pull-right">Checkout</a>
             </div>
 
           </div>
         </li>
+
         <ul class="nav navbar-nav header-jhelu">
 
           <% if user_signed_in? %>
+
               <%= link_to destroy_user_session_path, :method => :delete, class: 'btn btn-danger btn-logout' do %>
                   <span class="glyphicon glyphicon-off"></span>
                   Logout

@@ -27,10 +27,12 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts_as_votable (0.10.0)
     arel (5.0.1.20140414130214)
     autoprefixer-rails (5.2.1)
       execjs
       json
+    bcrypt (3.1.10)
     bcrypt (3.1.10-x86-mingw32)
     bootstrap-generators (3.3.4)
       railties (>= 3.1.0)
@@ -75,6 +77,7 @@ GEM
     mime-types (2.6.1)
     minitest (5.7.0)
     multi_json (1.11.2)
+    mysql2 (0.3.18)
     mysql2 (0.3.18-x86-mingw32)
     orm_adapter (0.5.0)
     rack (1.5.5)
@@ -137,6 +140,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  acts_as_votable
   bootstrap-generators (~> 3.3.4)
   bootstrap-sass (~> 3.3.4)
   carrierwave

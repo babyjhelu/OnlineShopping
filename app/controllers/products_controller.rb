@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   respond_to :html
 
   def index
-    @products = Product.all
+    @products = Product.all.where(:category_id => params[:category])
     respond_with(@products)
   end
 
@@ -31,6 +31,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def upvote
+    @link = Link.find(params[:id])
+    @link.upvote_by current_user
+    redirect_to links_path
+  end
 
   def create
     @product = Product.new(product_params)
