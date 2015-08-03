@@ -1,9 +1,9 @@
 <div class="page-header">
-  <%= link_to new_product_path, class: 'btn btn-primary' do %>
+  <%= link_to new_product_path(:category => @category.id), class: 'btn btn-primary' do %>
       <span class="glyphicon glyphicon-plus"></span>
       New Product
   <% end %>
-  <h1 class="title glyphicon glyphicon-shopping-cart"> Listing Products</h1>
+  <h1 class="title glyphicon glyphicon-shopping-cart"> <%= @category.category_name  %> Products</h1>
 </div>
 <div class="container">
   <div class="row">
@@ -22,7 +22,7 @@
               <p><b>Category:</b> <%= product.category.category_name %></p>
               <div class="glyphicon-jhelu">
                 <%= link_to '', product, :class => "glyphicon glyphicon-book book" %>
-                <%= link_to '', edit_product_path(product), :class => "glyphicon glyphicon-edit edit" %>
+                <%= link_to '', edit_product_path(:id => product.id , :category => @category.id), :class => "glyphicon glyphicon-edit edit" %>
                 <%= link_to '', product, method: :delete, data: {confirm: 'Are you sure?'}, :class => "glyphicon glyphicon-remove remove" %>
               </div>
             </div>

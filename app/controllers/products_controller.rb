@@ -6,8 +6,9 @@ class ProductsController < ApplicationController
   respond_to :html
 
   def index
+    @category = Category.find(params[:category])
     @products = Product.all.where(:category_id => params[:category])
-    respond_with(@products)
+
   end
 
   def show
@@ -16,11 +17,13 @@ class ProductsController < ApplicationController
   end
 
   def new
+    @category = Category.find(params[:category])
     @product = Product.new
     respond_with(@product)
   end
 
   def edit
+    @category = Category.find(params[:category])
   end
 
   def toggle_approve
@@ -40,20 +43,23 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.save
-    redirect_to products_path
-    flash[:notice] = "Product Successfully Created"
+    respond_to do |format|
+    format.html { redirect_to products_path(:category => @category.id), notice: 'Product was successfully created.' }
+  end
   end
 
   def update
     @product.update(product_params)
-    redirect_to products_path
-    flash[:notice] = "Product Successfully Updated"
+    respond_to do |format|
+      format.html { redirect_to products_path(:category => @category.id), notice: 'Product was successfully updated.' }
+    end
   end
 
   def destroy
     @product.destroy
-    respond_with(@product)
-    flash[:notice] = "Product Successfully Destroyed"
+    respond_to do |format|
+      format.html { redirect_to products_path(:category => @category.id), notice: 'Product was successfully destroyed.' }
+    end
   end
 
   private
