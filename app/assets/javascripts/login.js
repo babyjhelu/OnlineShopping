@@ -443,7 +443,7 @@ jQuery(document).ready(function() {
                 !options.ui.showVerdictsInsideProgressBar &&
                 verdictText.length > 0) {
                 html = "<h5><span class='password-verdict'>" + verdictText +
-                    "</span></h5>";
+                "</span></h5>";
                 hide = false;
             }
             if (options.ui.showErrors) {

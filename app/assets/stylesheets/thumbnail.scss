@@ -35,9 +35,12 @@
 
 }
 
-.thumb_height {
+.pic_height {
   height: 100%;
   max-height: 200px;
+}
+.thumb_height {
+  height: 200px;
 }
 
 .book {
@@ -90,4 +93,3 @@
 .carousel-indicators .active {
   background: #333333;
 }
-

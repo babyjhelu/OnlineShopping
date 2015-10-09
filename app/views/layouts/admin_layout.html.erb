@@ -30,7 +30,9 @@
         <li class="menu_link  <%= "active" if current_page?(root_path) %>">
           <a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
         <li class="menu_link <%= "active " if current_page?(categories_path) %>">
-          <a href="<%= categories_path %> "><span class="glyphicon glyphicon-th"></span>  Categories</a></li>
+        <a href="<%= categories_path %> "><span class="glyphicon glyphicon-th"></span>  Categories</a></li>
+        <li class="menu_link <%= "active " if current_page?(excel_path) %>">
+          <a href="<%= excel_path %> "><span class="glyphicon glyphicon-upload"></span>  Import Excel</a></li>
         <li><a href="#contact"><span class="glyphicon glyphicon-phone-alt"></span>  Contact</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right">

@@ -15,7 +15,7 @@ gem 'font-awesome-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use mysql as the database for Active Record
-gem 'mysql2'
+gem 'mysql2', '~> 0.3.18'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -48,3 +48,38 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
+
+gem 'omniauth-facebook'
+
+gem 'mini_magick'
+
+gem 'kaminari'
+
+gem 'bootstrap-kaminari-views'
+
+gem 'twitter'
+
+gem "koala", "~> 2.2"
+
+gem 'nested_form'
+
+gem 'roo'
+
+gem 'geocoder'
+
+gem 'nifty-generators'
+
+gem 'mailcatcher'
+
+gem 'puma'
+
+gem 'acts-as-taggable-on'
+# gem 'mailman', require: false
+
+# gem 'iconv'

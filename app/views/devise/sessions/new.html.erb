@@ -18,15 +18,15 @@
                 <form method="post" action="#" role="login">
                   <div class="text-center">
                     <%= link_to new_admin_session_path do %>
-                    <%= image_tag 'logo.png', :class => "logo-size"  %>
-                        <% end %>
+                        <%= image_tag 'logo.png', :class => "logo-size"  %>
+                    <% end %>
                   </div>
 
                   <div class="text-center">
 
                   </div>
                   <%= f.email_field :email, autofocus: true, :placeholder => "Email", :class => "form-control input-lg" , :style => "margin-bottom: 5px;" %>
-                      <%= f.password_field :password, autocomplete: "off", :class => "form-control input-lg", :placeholder => "Password" %>
+                  <%= f.password_field :password, autocomplete: "off", :class => "form-control input-lg", :placeholder => "Password" %>
                   <% if devise_mapping.rememberable? -%>
                       <div class="field">
                         <%= f.check_box :remember_me %>

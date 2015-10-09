@@ -5,12 +5,14 @@
 </div>
 <div class="container">
   <div class="row">
-    <%= content_tag_for(:tr, @categories) do |category| %>
+    <%= content_tag_for(:tr, @paginate_categories) do |category| %>
         <ul class="thumbnails col-md-3">
 
           <div class="thumbnail">
             <h3 class="text-center"><%= category.category_name %></h3>
-            <%= image_tag category.image , :class => "thumbnail thumb_height"  %>
+            <div class="thumbnail thumb_height">
+            <%= image_tag category.image , :class => "img-responsive"  %>
+              </div>
             <div class="caption">
 
               <% if category.status == true %>
@@ -36,6 +38,10 @@
     <% end %>
   </div>
 
+</div>
+
+<div class="text-center">
+  <%= paginate @paginate_categories , :pagination_class => "pagination-sm" %>
 </div>
 
 </body>

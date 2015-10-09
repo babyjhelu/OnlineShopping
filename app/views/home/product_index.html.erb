@@ -1,21 +1,26 @@
 <body class="login_background">
-<div class="jhelu-header">
 
-</div>
+<!--<div class="jhelu-header">-->
+
+<!--</div>-->
+
 <div class="container">
   <div class="row">
-    <%= content_tag_for(:tr, @products) do |product| %>
+    <%= content_tag_for(:tr, @paginate_products) do |product| %>
         <ul class="thumbnails col-md-3">
 
           <div class="thumbnail">
 
             <h3 class="text-center"><%= product.product_name %></h3>
-            <%= image_tag product.image , :class => "thumbnail thumb_height"%>
+            <div class="thumbnail thumb_height">
+            <%= image_tag product.image , :class => "img-responsive"%>
+              </div>
+
             <div class="caption">
             <% if product.status == true %>
-                <p class="active text-center"><b>Status:</b> Active</p>
+                <p class="active text-center hidden"><b>Status:</b> Active</p>
             <% else %>
-                <p class="inactive text-center"><b>Status:</b> Inactive</p>
+                <p class="inactive text-center hidden"><b>Status:</b> Inactive</p>
             <% end %>
             <p class="text-center">
               <%= link_to home_category_path , :class => 'btn btn-primary' do %>
@@ -27,7 +32,24 @@
 
               <p><b>Available Sizes:</b> <%= product.available_sizes %></p>
               <p><b>Available Colors:</b> <%= product.available_colors %></p>
-              <p><b>Category:</b> <%= product.category.category_name %></p>
+              <p class="hidden"><b>Category:</b> <%= product.category.category_name %></p>
+
+              <div class="caption text-center">
+                <%= link_to like_product_path(product), class: "like", method: :put do %>
+                    <button type="button" class="btn btn-info btn-xs" aria-label="Left Align">
+                      <span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span>
+                      <span class="badge"><%= product.get_upvotes.size %></span>
+                    </button>
+                <% end %>
+
+                <%= link_to unlike_product_path(product), class: "like", method: :put do %>
+                    <button type="button" class="btn btn-info btn-xs" aria-label="Left Align">
+                      <span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>
+                      <span class="badge"><%= product.get_downvotes.size %></span>
+                    </button>
+                <% end %>
+
+              </div>
 
             </div>
           </div>
@@ -35,6 +57,10 @@
     <% end %>
   </div>
 
+</div>
+
+<div class="text-center">
+  <%= paginate @paginate_products , :pagination_class => "pagination-sm" %>
 </div>
 
 </body>

@@ -1,0 +1,36 @@
+<div class="page-header">
+  <%= link_to locations_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_location_path(@location), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show location</h1>
+</div>
+
+<dl class="dl-horizontal">
+
+  <dt>Address:</dt>
+  <dd><%= @location.address %></dd>
+
+
+  <dt>Latitude:</dt>
+  <dd><%= @location.latitude %></dd>
+
+
+  <dt>Longitude:</dt>
+  <dd><%= @location.longitude %></dd>
+
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+
+  <h3>Nearby locations</h3>
+  <ul>
+
+    <% @location.nearbys(10) do |location| %>
+        <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+    <% end %>
+  </ul>
+
+</dl>

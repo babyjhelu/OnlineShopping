@@ -3,16 +3,20 @@
       <span class="glyphicon glyphicon-plus"></span>
       New Product
   <% end %>
+
   <h1 class="title glyphicon glyphicon-shopping-cart"> <%= @category.category_name  %> Products</h1>
 </div>
 <div class="container">
   <div class="row">
-    <%= content_tag_for(:tr, @products) do |product| %>
+    <%= content_tag_for(:tr, @paginate) do |product| %>
         <ul class="thumbnails col-md-3">
 
           <div class="thumbnail">
             <h3 class="text-center"><%= product.product_name %></h3>
-            <%= image_tag product.image , :class => "thumbnail thumb_height"  %>
+            <div class="thumbnail thumb_height">
+            <%= image_tag product.image , :class => "img-responsive"  %>
+              </div>
+
             <div class="caption">
 
               <p><%= link_to approve_link_text(product), toggle_approve_product_path(product), :remote => true, :id => "approve_link_#{product.id}" , :class => 'btn btn-success' %></p>
@@ -28,8 +32,17 @@
             </div>
           </div>
         </ul>
+
     <% end %>
   </div>
 
 </div>
+<div class="text-center">
+<%= paginate @paginate , :pagination_class => "pagination-sm" %>
+</div>
 
+<p>
+  Download:
+  <%= link_to "CSV", products_path(format: "csv") %> |
+  <%= link_to "Excel", products_path(format: "xls") %>
+</p>

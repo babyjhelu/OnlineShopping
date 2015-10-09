@@ -6,9 +6,32 @@ class CategoriesController < ApplicationController
   respond_to :html
 
   def index
+
     @categories = Category.all
-    respond_with(@categories)
+    @paginate = Category.page(params[:page]).per(4)
+    @category = Category.new
+
+      respond_to do |format|
+        format.html
+        format.csv { send_data @categories.to_csv }
+        format.xls # { send_data @products.to_csv(col_sep: "\t") }
+      end
+
   end
+
+  def excel
+
+  end
+
+  def import
+    begin
+      Category.import(params[:file])
+      redirect_to categories_path, notice: "Products imported."
+    rescue
+      redirect_to categories_path, notice: "Invalid CSV file format."
+    end
+  end
+
 
   def show
     respond_with(@category)

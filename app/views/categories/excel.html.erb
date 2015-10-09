@@ -1,0 +1,8 @@
+<div class="page-header">
+  </div>
+<div class="btn-group nav navbar-nav">
+  <%= form_tag @category, multipart: true do %>
+      <%= file_field_tag :file , :class => "form-control col-sm-3 btn-group"%><br /><br />
+      <%= submit_tag "Import" , class: 'btn btn-success' %>
+  <% end %>
+</div>

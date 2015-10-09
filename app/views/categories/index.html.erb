@@ -3,11 +3,12 @@
       <span class="glyphicon glyphicon-plus"></span>
       New Category
   <% end %>
+
   <h1 class="title glyphicon glyphicon-list-alt"> Listing Categories</h1>
 </div>
 <div class="container">
   <div class="row">
-    <%= content_tag_for(:tr, @categories) do |category| %>
+    <%= content_tag_for(:tr, @paginate) do |category| %>
     <ul class="thumbnails col-md-3">
 
         <div class="thumbnail">
@@ -40,3 +41,6 @@
 
 </div>
 
+<div class="text-center">
+  <%= paginate @paginate , :pagination_class => "pagination-sm" %>
+</div>

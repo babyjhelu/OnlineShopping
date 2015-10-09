@@ -2,18 +2,23 @@ Rails.application.routes.draw do
 
   root :to => 'home#index'
 
-  resources :categories
+  resources :locations
+
+  resources :categories do
+  collection { post :import }
+end
 
   resources :products do
     get 'toggle_approve', :on => :member
+
+    member do
+      put "like" => "home#upvote"
+      put "unlike" => "home#downvote"
+    end
+
   end
 
-  resources :products do
-    member do
-      put "like", to: "links#upvote"
-      put "dislike", to: "links#downvote"
-    end
-    end
+  resources :surveys
 
   devise_for :admins
 
@@ -29,6 +34,12 @@ Rails.application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+
+  get 'excel' => 'categories#excel'
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+
 
   get 'home/product' => 'home#product_index'
   get 'home/category' => 'home#category_index'
